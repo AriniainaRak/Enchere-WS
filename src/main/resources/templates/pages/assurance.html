@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Vehicule - Accueil</title>
+	<!-- <script type="text/javascript" src="demo/target/classes/templates/pages/js/vanilla.js" ></script> -->
+	<script type="text/javascript" th:src="@{/js/vanilla.js}" ></script>
+</head>
+<body>
+    <h1>Accueil</h1>
+
+	<h3>Recherche Enchere</h3>
+
+	<form action="" method="get">
+		<input type="text" name="recherche">
+		<input type="submit" value="Search">
+	</form>
+
+	<p>
+		<span id="detailVehicule"></span>
+	</p>
+
+	<p>
+		<a href="/accueil">retour</a>
+	</p>
+	<p>
+		<a href="/login">Deconnexion</a>
+	</p>
+
+</body>
+</html>

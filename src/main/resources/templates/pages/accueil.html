@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Enchere - Accueil</title>
+	<!-- <script type="text/javascript" src="demo/target/classes/templates/pages/js/vanilla.js" ></script> -->
+	<script type="text/javascript" th:src="@{/js/vanilla.js}" ></script>
+</head>
+<body>
+    <h1>Accueil</h1>
+
+	<h3>Liste Enchere</h3>
+
+	<table border="1" style="border-collapse: collapse;">
+		<tr>
+			<th>produit</th>
+			<th>categorie</th>
+			<th>date Debut</th>
+			<th>duree</th>
+			<th>prix Minimum</th>
+		</tr>
+
+		<tr th:each="enchere : ${detailenchere}">
+			<td th:text="${detailenchere.produit}" ></td>
+			<td th:text="${detailenchere.cattegorie}" ></td>
+			<td th:text="${detailenchere.datedebut}" ></td>
+			<td th:text="${detailenchere.duree}" ></td>
+			<td th:text="${detailenchere.prixmin}" ></td>
+			<td><button th:onclick="detailEnchere('[[(${detailenchere.id})]]')" >Voir details</button></td>
+		</tr>
+	</table>
+
+	<p>
+		<a href="/login">Deconnexion</a>
+	</p>
+
+</body>
+</html>
